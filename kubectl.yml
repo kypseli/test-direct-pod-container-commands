@@ -8,8 +8,9 @@ spec:
   containers:
   - name: kubectl
     image: gcr.io/cloud-builders/kubectl
-    command:
-    - kubectl -n cje get pods
-    tty: true
+    args: 
+    - -n cje
+    - get
+    - pods
   securityContext:
    runAsUser: 1000
