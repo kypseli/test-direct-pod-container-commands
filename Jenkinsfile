@@ -27,7 +27,7 @@ spec:
     stage('Clean') {
       steps {
         container('kubectl') {
-          sh('kubectl -n cje get psp')
+          sh('kubectl -n cje get pods')
           sh('kubectl -n cje apply -f kubectl.yml')
         } 
       }
